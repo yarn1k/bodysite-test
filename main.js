@@ -55,6 +55,19 @@ $('.hits-carousel').slick({
 	]
 });
 
+$(".card-item__zoom").click(function() {
+	var cardImage = $(this).parent().find('.card-item__image');
+	var srcValue = cardImage.attr('src');
+	var altValue = cardImage.attr('alt');
+	$(".large-image").attr('src', srcValue);
+	$(".large-image").attr('alt', altValue);
+	$('.popup-fade').fadeIn();
+});
+
+$(".close-btn").click(function() {
+	$(".popup-fade").fadeOut();
+})
+
 if ($(window).width() <= 576) {
 	const advantagesItems = $('.advantages__item');
 	for (var i = 1; i < advantagesItems.length; i++){

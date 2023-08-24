@@ -179,7 +179,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/iphone-8.png" class="card-item__image" alt="Iphone 8"></a>
 								</div>
@@ -216,7 +216,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/samsung-galaxy-s8.png" class="card-item__image" alt="Samsung Galaxy S8"></a>
 								</div>
@@ -253,7 +253,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/huawei-honor-9.png" class="card-item__image" alt="Huawei Honor 9"></a>
 								</div>
@@ -290,7 +290,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/asus-zenfone-4-max-zc554kl.png" class="card-item__image" alt="ASUS ZenFone 4 Max ZC554KL"></a>
 								</div>
@@ -328,7 +328,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/iphone-8.png" class="card-item__image" alt="Iphone 8"></a>
 								</div>
@@ -365,7 +365,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/samsung-galaxy-s8.png" class="card-item__image" alt="Samsung Galaxy S8"></a>
 								</div>
@@ -402,7 +402,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/huawei-honor-9.png" class="card-item__image" alt="Huawei Honor 9"></a>
 								</div>
@@ -439,7 +439,7 @@
 								<div class="card-item__preview">
 									<div class="card-item__hit">hit</div>
 									<img src="img/magnify_icon.svg" class="card-item__magnify" alt="Magnify">
-									<a href="#"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></a>
+									<div class="card-item__zoom"><img src="img/panel.png" class="card-item__panel" alt="Zoom"></div>
 									<a href="#"><img src="img/youtube.svg" class="card-item__youtube d-mobile" alt="YouTube"></a>
 									<a href="#"><img src="img/catalog/asus-zenfone-4-max-zc554kl.png" class="card-item__image" alt="ASUS ZenFone 4 Max ZC554KL"></a>
 								</div>
@@ -475,9 +475,21 @@
 				</div>
 			</div>
 		</section>
+		<!-- // popup modal -->
+		<div class="popup-fade">
+			<div class="popup-modal">
+				<div class="close-btn-area">
+					<button class="close-btn">X</button>
+					<hr>
+				</div>
+				<div class="image-show-area">
+					<img class="large-image" src="" alt="">
+				</div>
+			</div>
+		</div>
 	</main>
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="slick.min.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>

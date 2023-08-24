@@ -142,6 +142,9 @@ body {
 .card-item__magnify {
 	display: none;
 }
+.card-item__zoom {
+	cursor: pointer;
+}
 .card-item__panel {
 	display: none;
 }
@@ -302,6 +305,39 @@ body {
     position: relative;
 }
 .prev, .next {
+	cursor: pointer;
+}
+/* IMAGE POPUP MODAL */
+.popup-fade {
+	background: rgba(102, 102, 102, 0.5);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.popup-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1000;
+	transform: translate(-50%, -50%);
+}
+.popup-modal img {}
+.close-btn-area {
+	box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	padding: 8px;
+	text-align: right;
+}
+.close-btn-area hr {
+	margin: 8px 0px 0px 0px;
+}
+.close-btn {
+	font-size: 20px;
+	padding: 2px;
 	cursor: pointer;
 }
 /* ADAPTIVE */
