@@ -27,6 +27,34 @@ function initRatings() {
 	}
 }
 
+$('.hits-carousel').slick({
+	arrows: true,
+	prevArrow: $('.prev'),
+	nextArrow: $('.next'),
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	speed: 500,
+	infinite: false,
+	draggable: false,
+	waitForAnimate: true,
+	responsive: [
+		{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	]
+});
+
 if ($(window).width() <= 576) {
 	const advantagesItems = $('.advantages__item');
 	for (var i = 1; i < advantagesItems.length; i++){
@@ -43,10 +71,6 @@ if ($(window).width() <= 576) {
 	}
 	for (var i = 0; i < cardItems.length - 1; i++) {
 		$(cardItems[i]).parent().append('<hr class="catalog__hr">');
-	}
-	const hitsItems = $('.hits').find('.card-item');
-	for (var i = 1; i < hitsItems.length; i++) {
-		$(hitsItems[i]).hide();
 	}
 	$('.card-item__hit').text('хит');
 	$('.card-item__hit').css({'right':'auto'});
