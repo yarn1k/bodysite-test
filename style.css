@@ -23,8 +23,6 @@ body {
 .container {
 	box-sizing: border-box;
 	width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -43,12 +41,18 @@ body {
 	display: none;
 }
 /* Блок Преимущества */
-.advantages {
+.advantages {}
+.home__advantages {
 	margin: 62px 0px 0px 0px;
 }
 .advantages__item {
-	display: flex;
-	align-items: center;
+    display: flex;
+    width: 350px!important;
+    align-items: center;
+    margin: 0px 30px 0px 0px;
+}
+.advantages__item:last-child {
+	margin: 0;
 }
 .advantages__text-block {
 	margin: 0px 0px 0px 20px;
@@ -63,7 +67,8 @@ body {
 	line-height: 20px;
 }
 /* Блок Каталог */
-.catalog {
+.catalog {}
+.home__catalog {
 	margin: 78px 0px 0px 0px;
 }
 .catalog__title {
@@ -118,7 +123,7 @@ body {
 	box-sizing: border-box;
 	width: 255px;
 	padding: 20px;
-	margin: 0 auto;
+	margin: 0px 0px 30px 0px;
 	border: 1px solid transparent;
 }
 .card-item__image {
@@ -166,7 +171,7 @@ body {
 	line-height: 21px;
 	margin: 0px 0px 20px 0px;
 }
-.card-item__price span {
+.card-item__price_strikethrough {
 	font-size: 13px;
 	text-decoration: line-through;
 	color: #BDBDBD;
@@ -265,7 +270,8 @@ body {
 	margin: 0px 0px 0px 10px;
 }
 /* Блок Хиты продаж */
-.hits {
+.hits {}
+.home__hits {
 	margin: 30px 0px 60px 0px;
 }
 .hits__header {
@@ -399,10 +405,10 @@ body {
 	.d-mobile {
 		display: block;
 	}
-	.advantages {
+	.home__advantages {
 		margin: 42px 0px 0px 0px;
 	}
-	.catalog {
+	.home__catalog {
 		margin: 42px 0px 0px 0px;
 	}
 	.page__title {
@@ -425,6 +431,12 @@ body {
 	}
 	.catalog .card-item {
 		padding: 15px;
+	}
+	.card-item__price {
+		font-size: 22px;
+	}
+	.card-item__price_strikethrough {
+		font-size: 18px;
 	}
 	.catalog__card {
 		display: flex;

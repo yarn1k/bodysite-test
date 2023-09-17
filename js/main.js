@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 const ratings = $('.rating');
 
 if (ratings.length > 0) {
@@ -27,19 +28,47 @@ function initRatings() {
 	}
 }
 
+$('.advantages-carousel').slick({
+	arrows: false,
+	slidesToShow: 3,
+	slidesToScroll: 3,
+	responsive: [
+		{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			}
+		},
+		{
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			}
+		}
+	]
+});
+
 $('.hits-carousel').slick({
 	arrows: true,
 	prevArrow: $('.prev'),
 	nextArrow: $('.next'),
 	slidesToShow: 4,
-	slidesToScroll: 1,
+	slidesToScroll: 4,
 	speed: 500,
-	infinite: false,
+	infinite: true,
 	draggable: false,
-	waitForAnimate: true,
 	responsive: [
 		{
 			breakpoint: 1100,
+			settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3
+			}
+		},
+		{
+			breakpoint: 800,
 			settings: {
 				slidesToShow: 2,
 				slidesToScroll: 2
@@ -69,23 +98,20 @@ $(".close-btn").click(function() {
 })
 
 if ($(window).width() <= 576) {
-	const advantagesItems = $('.advantages__item');
-	for (var i = 1; i < advantagesItems.length; i++){
-		$(advantagesItems[i]).hide();
-	}
 	const catalogTitle = $('.catalog').find('.page__title');
 	catalogTitle.text('Популярные категории');
 	catalogTitle.removeClass('catalog__title');
 	const cardItems = $('.catalog').find('.card-item');
 	const catalogCounts = $('.catalog__count');
-	for (var i = 0; i < catalogCounts.length; i++) {
+	for (let i = 0; i < catalogCounts.length; i++) {
 		let currentText = $(catalogCounts[i]).text();
 		$(catalogCounts[i]).text(currentText.replace('товара', '').trim());
 	}
-	for (var i = 0; i < cardItems.length - 1; i++) {
-		$(cardItems[i]).parent().append('<hr class="catalog__hr">');
+	for (let i = 0; i < cardItems.length - 1; i++) {
+		$(cardItems[i]).parent().append('<div class="catalog__hr"></div>');
 	}
 	$('.card-item__hit').text('хит');
 	$('.card-item__hit').css({'right':'auto'});
-	$('.card-btn').css({'padding':'12px 80px'});
+	$('.card-btn').css({'padding':'0px 50px'});
 }
+});
